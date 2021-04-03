@@ -1,7 +1,6 @@
 <template>
   <div>
     <!--    value 控制每一次的状态-->
-    <!--    input 拿到最新的值-->
     <Switch v-model:value="bool"/>
   </div>
 </template>

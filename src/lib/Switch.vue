@@ -10,7 +10,6 @@ export default {
   props: {
     //props是一个只读属性
     value: Boolean,
-
   },
   setup(props, context) {
     const toggle = () => {
