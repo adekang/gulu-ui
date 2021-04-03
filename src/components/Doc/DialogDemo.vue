@@ -4,7 +4,14 @@
   <Dialog v-model:visible="x"
           :closeOnClickOverlay="false"
           :ok="f1"
-          :cancel="f2"/>
+          :cancel="f2">
+    <template v-slot:content>
+      <div>123</div>
+    </template>
+    <template v-slot:title>
+      <div>标题</div>
+    </template>
+  </Dialog>
 </template>
 
 <script lang='ts'>
