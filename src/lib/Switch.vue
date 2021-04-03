@@ -1,17 +1,22 @@
 <template>
-  <button @click="toggle" :class="{checked}"><span></span></button>
+  <button @click="toggle" :class="{checked:value}">
+    <span></span></button>
+  <div>{{ value }}</div>
 </template>
 
 <script lang='ts'>
-import {ref} from 'vue';
+
 
 export default {
-  setup() {
-    const checked = ref(false);
+  props: {
+    //props是一个只读属性
+    value: Boolean
+  },
+  setup(props, context) {
     const toggle = () => {
-      checked.value = !checked.value;
+      context.emit('input', !props.value);
     };
-    return {checked, toggle};
+    return {toggle};
   }
 };
 </script>
@@ -26,6 +31,7 @@ button {
   background: gray;
   border-radius: $h/2;
   position: relative;
+
 }
 
 span {
@@ -36,6 +42,7 @@ span {
   width: $h2;
   background: white;
   border-radius: $h2 / 2;
+  transition: left 250ms;
 }
 
 button.checked {
@@ -44,5 +51,9 @@ button.checked {
 
 button.checked > span {
   left: calc(100% - #{$h2} - 2px);
+}
+
+button:focus {
+  outline: none;
 }
 </style>
