@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import {md} from './plugins/md.ts';
+import {md} from './src/plugins/md.ts';
 
 export default {
   plugins: [md()]
