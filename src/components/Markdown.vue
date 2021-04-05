@@ -14,7 +14,7 @@ export default {
     }
   },
   setup(props) {
-    const content = ref(null);
+    const content = ref<null>(null);
     import(props.path).then(result => {
       content.value = result.default;
     });
