@@ -12,6 +12,7 @@
       <strong>加粗的标题</strong>
     </template>
   </Dialog>
+
   <h1>示例2</h1>
   <Button @click="showDialog">show</Button>
 
@@ -34,9 +35,10 @@ export default {
       x.value = !x.value;
     };
     const f1 = () => {
-      return false;
+      return true;
     };
     const f2 = () => {};
+
     const showDialog = () => {
       openDialog({
         title: h('strong', {}, '标题'),
