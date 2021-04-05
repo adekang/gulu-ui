@@ -46,7 +46,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @import "../assets/prism.css";
 
 $border-color: #d9d9d9;
