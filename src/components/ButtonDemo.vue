@@ -12,7 +12,7 @@
 </template>
 
 <script lang='ts'>
-import Demo from '../Demo.vue';
+import Demo from './Demo.vue';
 import Button1Demo from './Button1Demo.vue';
 import Button2Demo from './Button2Demo.vue';
 import Button3Demo from './Button3Demo.vue';

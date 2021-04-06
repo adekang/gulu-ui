@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import Demo from '../Demo.vue';
+import Demo from './Demo.vue';
 import Dialog1Demo from './Dialog1Demo.vue';
 import Dialog2Demo from './Dialog2Demo.vue';
 

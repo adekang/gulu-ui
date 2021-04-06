@@ -17,8 +17,8 @@
 </template>
 
 <script lang="ts">
-import Dialog from '../../lib/Dialog.vue';
-import Button from '../../lib/Button.vue';
+import Dialog from '../lib/Dialog.vue';
+import Button from '../lib/Button.vue';
 import {
   ref
 } from 'vue';
@@ -34,7 +34,7 @@ export default {
       x.value = !x.value;
     };
     const f1 = () => {
-      return false;
+      return true;
     };
     const f2 = () => {};
     return {
