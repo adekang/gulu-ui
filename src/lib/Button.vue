@@ -3,8 +3,9 @@
   <!--    绑定属性  v-bind="$attrs"-->
   <button class="gulu-button"
           :class="classes"
-          :disabled="disabled">
-    <span v-if="loading" class="gulu-loadingIndicator"></span>
+          :disabled="disabled"
+          :loading="loading">
+    <div v-if="loading" class="gulu-loadingIndicator"></div>
     <slot/>
   </button>
 
