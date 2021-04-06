@@ -2,23 +2,21 @@
   <router-view/>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
+import {
+  ref,
+  provide
+} from 'vue';
+import {
+  router
+} from './router';
 
-import {ref, provide} from 'vue';
-import {router} from './router';
-
-export default {
-  name: 'App',
-  setup() {
-    const width = document.documentElement.clientWidth;
-    // 初始值
-    const menuVisible = ref(width > 500);
-    provide('menuVisible', menuVisible);
-    router.afterEach(() => {
-      if (width <= 500) {
-        menuVisible.value = false;
-      }
-    });
+const width = document.documentElement.clientWidth;
+const menuVisible = ref(width > 500);
+provide('menuVisible', menuVisible); // set
+router.afterEach(() => {
+  if (width <= 500) {
+    menuVisible.value = false;
   }
-};
+});
 </script>

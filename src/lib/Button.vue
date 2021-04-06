@@ -1,28 +1,23 @@
 <template>
-
-  <!--    绑定属性  v-bind="$attrs"-->
-  <button class="gulu-button"
-          :class="classes"
-          :disabled="disabled"
-          :loading="loading">
-    <div v-if="loading" class="gulu-loadingIndicator"></div>
+  <button class="gulu-button" :class="classes" :disabled="disabled">
+    <span v-if="loading" class="gulu-loadingIndicator"></span>
     <slot/>
   </button>
-
 </template>
 
-<script lang='ts'>
+
+<script lang="ts">
 import {computed} from 'vue';
 
 export default {
   props: {
     theme: {
       type: String,
-      default: 'button'
+      default: 'button',
     },
     size: {
       type: String,
-      default: 'normal'
+      default: 'normal',
     },
     level: {
       type: String,
@@ -47,11 +42,10 @@ export default {
       };
     });
     return {classes};
-  }
+  },
 };
 </script>
-
-<style lang='scss'>
+<style lang="scss">
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
@@ -75,10 +69,8 @@ $grey: grey;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: background 250ms;
 
-
   & + & {
     margin-left: 8px;
-
   }
 
   &:hover,
@@ -113,7 +105,7 @@ $grey: grey;
 
     &:hover,
     &:focus {
-      background: darken(white, 5%);;
+      background: darken(white, 5%);
     }
   }
 

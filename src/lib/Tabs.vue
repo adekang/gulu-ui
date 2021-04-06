@@ -37,11 +37,9 @@ export default {
   setup(props, context) {
     // 导航线条的移动
     const selectedItem = ref<HTMLDivElement>(null);
-
     const indicator = ref<HTMLDivElement>(null);
     const container = ref<HTMLDivElement>(null);
     const x = () => {
-
       const {
         width
       } = selectedItem.value.getBoundingClientRect();
@@ -57,22 +55,18 @@ export default {
     };
     onMounted(x);
     onUpdated(x);
-
     const defaults = context.slots.default();
     defaults.forEach((tag) => {
-      // @ts-ignore
-      if (tag.type.name !== Tab.name) {
+      if (tag.type !== Tab) {
         throw new Error('Tabs 子标签必须是 Tab');
       }
     });
     const select = (title: string) => {
       context.emit('update:selected', title);
     };
-
     const titles = defaults.map((tag) => {
       return tag.props.title;
     });
-
     return {
       defaults,
       titles,
@@ -80,7 +74,6 @@ export default {
       selectedItem,
       indicator,
       container
-
     };
   }
 };

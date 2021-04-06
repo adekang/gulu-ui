@@ -55,12 +55,13 @@ export default {
       }
     };
     const ok = () => {
-      if (props.ok?.() !== false) {
+      if (props.ok && props.ok() !== false) {
         close();
       }
     };
     const cancel = () => {
-      props.cancel?.();
+      if (props.cancel && props.cancel()) {
+      }
       close();
     };
     return {close, onClickOverlay, ok, cancel};
