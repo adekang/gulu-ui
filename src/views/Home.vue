@@ -6,7 +6,7 @@
         <h1>UI</h1>
         <h2>一个厉害的 UI 框架</h2>
         <p class="actions">
-          <a href="#">GitHub</a>
+          <a href="https://github.com/adekang/gulu-ui">GitHub</a>
           <router-link to="/doc">开始</router-link>
         </p>
       </div>
@@ -26,7 +26,7 @@
           <use xlink:href="#icon-typescript"></use>
         </svg>
         <h3>基于 TypeScript </h3>
-        <p>源代码采用 TypeScript 书写（非严格检查）</p>
+        <p>源代码采用 TypeScript 书写</p>
       </li>
       <li>
         <svg>
