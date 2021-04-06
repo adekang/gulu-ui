@@ -27,7 +27,6 @@ import Button from './Button.vue';
 
 export default {
   props: {
-
     visible: {
       type: Boolean,
       default: false
@@ -56,7 +55,7 @@ export default {
       }
     };
     const ok = () => {
-      if (props.ok && props.ok() !== false) {
+      if (props.ok?.() !== false) {
         close();
       }
     };

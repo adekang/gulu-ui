@@ -5,7 +5,7 @@
   <Switch v-model:value="bool" disabled/>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import Switch from '../lib/Switch.vue';
 import {
   ref
@@ -14,7 +14,6 @@ import {
 export default {
   components: {
     Switch,
-
   },
   setup() {
     const bool = ref(false);
@@ -22,7 +21,5 @@ export default {
       bool
     };
   }
-
 };
 </script>
-

@@ -1,7 +1,8 @@
 <template>
   <button class="gulu-switch" @click="toggle" :class="{'gulu-checked':value}">
-    <span></span></button>
-  <div>{{ value }}</div>
+    <span></span>
+  </button>
+
 </template>
 
 <script lang='ts'>
@@ -20,7 +21,7 @@ export default {
 };
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 $h: 22px;
 $h2: $h - 4px;
 .gulu-switch {
