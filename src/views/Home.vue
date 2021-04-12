@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="topNavAndBanner">
-      <TopNav/>
+      <TopNav />
       <div class="banner">
         <h1>UI</h1>
-        <h2>一个厉害的 UI 框架</h2>
+        <h2>一个厉害的 GULU UI 框架</h2>
         <p class="actions">
           <a href="https://github.com/adekang/gulu-ui">GitHub</a>
           <router-link to="/doc">开始</router-link>
@@ -25,7 +25,7 @@
         <svg>
           <use xlink:href="#icon-typescript"></use>
         </svg>
-        <h3>基于 TypeScript </h3>
+        <h3>基于 TypeScript</h3>
         <p>源代码采用 TypeScript 书写</p>
       </li>
       <li>
@@ -37,14 +37,12 @@
       </li>
     </ul>
   </div>
-
 </template>
 <script lang="ts">
-
-import TopNav from '../components/TopNav.vue';
+import TopNav from "../components/TopNav.vue";
 
 export default {
-  components: {TopNav}
+  components: { TopNav },
 };
 </script>
 
@@ -53,7 +51,11 @@ $green: #02bcb0;
 $border-radius: 4px;
 $color: #007974;
 .topNavAndBanner {
-  background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+  background: linear-gradient(
+    145deg,
+    rgba(227, 255, 253, 1) 0%,
+    rgba(183, 233, 230, 1) 100%
+  );
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 
@@ -95,7 +97,7 @@ $color: #007974;
       }
 
       > p {
-        grid-area: text
+        grid-area: text;
       }
     }
   }
